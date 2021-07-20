@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <title>Mortgage Calculator</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Mortgage Calculator</h1>
+    </header>
+    <main class="wrapper">
+        <section class="calcArea">
+            <form id="mortCalc" onsubmit ="return false" novalidate>
+                <h2 id="instructions">Change the values to calculate your results</h2>
+                <hr/>
+                <h3 class="calcHeader">Years of Mortgage</h3>
+                <div id="yearsOutputCont">                    
+                    <div class="slideContainer">
+                        <p class="firstRange">1</p>
+                        <input type="range" id="years" name="yearRange" min="1" max="40" value="15" oninput="this.form.yearInput.value=this.value" />
+                        <p class="secondRange">40</p>
+                    </div>
+                    <input type="text" id="yearsOutput" name="yearInput" min="1" max="40" value="15" oninput="this.form.yearRange.value=this.value" />                  
+                </div>
+                <h3 class="calcHeader">Rate of interest (%)</h3>
+                <div id="slideOutputCont">                        
+                    <div class="slideContainer">
+                        <p class="firstRange">0.1</p>
+                        <input type="range" id="interest" name="interestRange" min="0.1" max="10" value="3" oninput="this.form.interestInput.value=this.value" step="0.001"/>
+                        <p class="secondRange">10</p>
+                    </div>        
+                    <input type="text" id="intOutput" name="interestInput" min="0.1" max="10" value="3" oninput="this.form.interestRange.value=this.value" step="0.001"/>                 
+                </div>
+                <label for="loanAmt"  class="calcHeader" id="loanAmtLabel">Loan Amount</label>
+                <span class="inputDollar">
+                    <input type="number" id="loanAmt" name="loanAmt" required>
+                </span>
+                <span class="error"></span>
+                <div id="taxInsuranceCont">
+                    <div id="taxInput">
+                        <label for="annualTax" class="calcHeader">Annual Tax</label>
+                        <span class="inputDollar">
+                            <input type ="number" id="annualTax" name="annualTax" required>
+                        </span> 
+                        <span class="error"></span>
+                    </div>
+                    <div id="insuranceInput">
+                        <label for="insurance" class="calcHeader">Annual Insurance</label>
+                        <span class="inputDollar">
+                            <input type="number" name="currency" id="insurance" name="insurance" required>
+                        </span>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <input type="submit" class="button" value="Calculate">
+            </form>
+        </section>
+        <section class="results">
+            <h2 id="resultsHeader">Your Results</h2>
+            <h3 class="resultSubHeader">Principal & Interest</h3>
+            <p id="pAndI"></p>
+            <h3 class="resultSubHeader">Tax</h3>
+            <p id="tax"></p>
+            <h3 class="resultSubHeader">Insurance</h3>
+            <p id="insuranceCalc"></p>
+            <hr>
+            <h3 class="resultSubHeader">Total Monthly Payment</h3>
+            <p id="total"></p>
+        </section>
+    </main> 
+    <script src="main.js"></script>
+    <script src ="calc.js"></script>      
+</body>
+</html>

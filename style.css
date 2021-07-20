@@ -1,0 +1,281 @@
+@font-face {
+  font-family: Graphik;
+  src: url(fonts/Graphik-Medium.otf);
+}
+@font-face {
+  font-family: Publico;
+  src: url(fonts/PublicoBanner-Medium.otf);
+}
+header {
+  padding-left: 9.375em;
+  border-bottom: 3px solid #fbfbfb;
+  height: 64px;
+}
+.title {
+  font-family: Publico;
+  font-size: 31.25px;
+  line-height: 39.06px;
+}
+#instructions {
+  font-family: Helvetica Neue;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.023em;
+  text-align: left;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em 9.375em;
+}
+.results {
+  padding: 1em;
+}
+.calcArea {
+  padding: 1.5em 2em 2.5em 1.5em;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  flex: 1.6507;
+}
+.results {
+  background-color: #fbfbfb;
+  flex: 1.0621;
+  height: 540px;
+  position: relative;
+  top: 44px;
+}
+.calcHeader {
+  font-family: Graphik, Sans-Serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+#insuranceInput > label,
+#taxInput > label,
+#loanAmtLabel {
+  display: flex;
+}
+.firstRange {
+  margin-right: 16px;
+}
+.secondRange {
+  margin-left: 16px;
+}
+.firstRange,
+.secondRange {
+  font-family: Graphik, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 150%;
+}
+#yearsOutputCont,
+#slideOutputCont {
+  display: flex;
+  justify-content: space-between;
+}
+#yearsOutputCont {
+  margin-bottom: 54px;
+}
+#slideOutputCont {
+  margin-bottom: 62px;
+}
+#intOutput,
+#yearsOutput {
+  width: 88px;
+  height: 48px;
+  text-align: center;
+  border: 1px solid #bbbcbc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.slideContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 80%;
+}
+#taxInsuranceCont {
+  display: flex;
+  margin-top: 21px;
+}
+#taxInsuranceCont,
+#interest,
+#years,
+#loanAmt,
+.button {
+  width: 100%;
+}
+input[type="range"] {
+  --thumbSize: 36px;
+  --trackSize: 16px;
+  --thumbBg: #fff;
+  --trackBg: #dddddd;
+  --progressBg: #1b3979;
+
+  /* webkit progress workaround */
+  --webkitProgressPercent: 0%;
+}
+#interest,
+#years {
+  -webkit-appearance: none;
+  appearance: none;
+  height: var(--thumbSize);
+  margin-top: 15px;
+  border-radius: 8px;
+}
+input#interest::-webkit-slider-thumb,
+input#years::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--thumbBg);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  border-radius: 50%;
+  height: var(--thumbSize);
+  width: var(--thumbSize);
+  margin-top: calc(((var(--thumbSize) - var(--trackSize)) / 2) * -1);
+  cursor: pointer;
+}
+input#interest::-webkit-slider-runnable-track,
+input#years::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: var(--trackSize);
+  background-image: linear-gradient(
+    90deg,
+    var(--progressBg) var(--webkitProgressPercent),
+    var(--trackBg) var(--webkitProgressPercent)
+  );
+  border-radius: 8px;
+}
+
+#loanAmt,
+#taxInput {
+  margin-right: 8px;
+}
+#loanAmt {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#taxInput,
+#insuranceInput {
+  width: 50%;
+}
+#annualTax,
+#insurance {
+  width: 98%;
+}
+#loanAmt,
+#annualTax,
+#insurance,
+#intOutput,
+#yearsOutput {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+}
+#loanAmt,
+#annualTax,
+#insurance {
+  height: 48px;
+  border: 1px solid #bbbcbc;
+  box-sizing: border-box;
+  padding-left: 24px;
+}
+#annualTax,
+#insurance,
+#loanAmt,
+.button {
+  border-radius: 8px;
+}
+.button {
+  background-color: royalblue;
+  color: white;
+  height: 56px;
+  margin-top: 36px;
+  font-family: Graphik, Sans-Serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+}
+.error {
+  color: #d83e00;
+  font-family: Helvetica Neue;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.023em;
+  text-align: left;
+}
+.invalid {
+  border: 1px solid #d83e00 !important;
+}
+input[type="number"]:focus {
+  outline: none !important;
+  border: 1px solid #316eef;
+  box-shadow: 0 0 10px #316eef;
+}
+.inputDollar {
+  position: relative;
+  display: inline-block;
+  width: -webkit-fill-available;
+}
+.inputDollar input {
+  padding-left: 18px;
+}
+.inputDollar:before {
+  position: absolute;
+  top: 0;
+  content: "$";
+  left: 24px;
+  top: 14px;
+}
+#resultsHeader {
+  font-family: Graphik, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 150%;
+}
+.resultSubHeader {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16.1px;
+  line-height: 28px;
+  letter-spacing: 0.023em;
+  color: #5d5d5d;
+}
+#pAndI,
+#tax,
+#insuranceCalc,
+#total {
+  position: static;
+  height: 38px;
+  left: 0px;
+  top: 38px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 150%;
+  color: #000000;
+}
+@media all and (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 1em;
+  }
+  header {
+    padding-left: 1em;
+  }
+}
