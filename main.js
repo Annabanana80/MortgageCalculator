@@ -95,7 +95,7 @@ function onReady(){
     }
     mortCalc.addEventListener('submit', (e)=>{
         //get and append principal and interest
-        
+        e.preventDefault();
         if(!loanAmt.validity.valid || !annualTax.validity.valid || !insurance.validity.valid){
             showError();
         }else{
