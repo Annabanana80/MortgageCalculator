@@ -226,21 +226,6 @@ input[type="number"]:focus {
   border: 1px solid #316eef;
   box-shadow: 0 0 10px #316eef;
 }
-.inputDollar {
-  position: relative;
-  display: inline-block;
-  width: -webkit-fill-available;
-}
-.inputDollar input {
-  padding-left: 18px;
-}
-.inputDollar:before {
-  position: absolute;
-  top: 0;
-  content: "$";
-  left: 24px;
-  top: 14px;
-}
 #resultsHeader {
   font-family: Graphik, sans-serif;
   font-style: normal;
